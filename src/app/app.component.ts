@@ -8,4 +8,5 @@ import { Quotes} from './quotes'
 })
 export class AppComponent {
   title = 'QUOTES HUB';
+  
 }
