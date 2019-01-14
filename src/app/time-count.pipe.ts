@@ -6,20 +6,24 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class TimeCountPipe implements PipeTransform {
 
 transform(value: any): number {
-    let currentTime:Date = new Date();
-    let uploadTime:any = new Date(currentTime.getFullYear(),currentTime.getMonth(),currentTime.getDate())
-    var dateDifference =Math.abs(value-uploadTime )// returns value in milliseconds
-    const secondsInADay= 86400; //60 seconds*60 minutes in an hour *24 hours
-
-    var dateDifferenceSeconds=dateDifference*0.001; //converts to seconds
-
-    var dateCounter = dateDifferenceSeconds/secondsInADay;
-
-    if (dateCounter >= 1){
-        return dateCounter;
-    }else{
-        return 0;
-    }
-  }
-
-}
+    let day,hours,minutes;
+     if(value <= 59){
+     return `a few seconds ago`;
+     }
+     else if(value >= 60 && value <= 3599){
+       minutes = Math.round(value/60);
+       if(minutes == 1){
+       return `${minutes} minute ago`;
+     }else{
+       return `${minutes} minutes ago`;
+       }
+     }else{
+       hours = Math.round(value/3600);
+       if(hours == 1){
+       return`${hours} hour ago`;
+     }else{
+       return `${hours} hour ago`;
+       }
+      }
+     }
+   }

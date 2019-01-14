@@ -1,5 +1,6 @@
 
 <h1> QUOTES HUB </h1>
+<h2>By WanjikuMwadime</h2>
 <hr>
 <div class="container">
   <div class="row">
@@ -8,10 +9,16 @@
 </div>
 <ul>
   <div *ngFor='let quote of quotes;let i=index'>
-    <div class="details">
+    <div class="container-fluid">
+     <div class="jumbotron">
+      <div class="row">
+      <div class="details">
       <p> Quote: "{{quote.quote}}"</p>
       <p>Author: {{quote.author}}</p>
+      </div>
+      <app-quote-details [quote]='quote'(isComplete)='deleteQuote($event,i)'></app-quote-details>
+      </div>
     </div>
-    <app-quote-details [quote]='quote'(isComplete)='deleteQuote($event,i)'></app-quote-details>
   </div>
+ </div>
 </ul>
