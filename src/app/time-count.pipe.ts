@@ -13,16 +13,16 @@ transform(value: any): number {
      else if(value >= 60 && value <= 3599){
        minutes = Math.round(value/60);
        if(minutes == 1){
-       return `${minutes} minute ago`;
+         return `${minutes} minute ago`;
      }else{
        return `${minutes} minutes ago`;
-       }
+     }
      }else{
        hours = Math.round(value/3600);
        if(hours == 1){
-       return`${hours} hour ago`;
-     }else{
-       return `${hours} hour ago`;
+         return`${hours} hour ago`;
+       }else{
+         return `${hours} hours ago`;
        }
       }
      }
