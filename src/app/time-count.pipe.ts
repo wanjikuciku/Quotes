@@ -22,7 +22,7 @@ transform(value: any): number {
        if(hours == 1){
        return`${hours} hour ago`;
      }else{
-       return `${hours} hours ago`;
+       return `${hours} hour ago`;
        }
       }
      }

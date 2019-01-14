@@ -1,7 +1,7 @@
 <p>{{quote.details}}</p>
 <div class =container-fluid>
   <div class=jumbotron>
-    <span class="date">This quote was uploaded {{quote.dateCreated |timeCount}} minutes ago.</span>
+    <span class="date">This quote was uploaded {{quote.time |timeCount}} minutes ago.</span>
      <div class="btns">
       <button id="delete" class="btn btn-danger btn-lg" (click)='quoteDelete(true)'><i class="far fa-trash-alt"></i></button>
       <button id="upvote" class="btn btn-danger" (click)='upVote()'><i class="far fa-thumbs-up"></i><span>{{upVotes}}</span></button>
