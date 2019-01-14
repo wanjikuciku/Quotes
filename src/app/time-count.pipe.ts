@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TimeCountPipe implements PipeTransform {
 
-transform(value: any): number {
-    let day,hours,minutes;
+transform(value: any): any {
+    let days,hours,minutes;
      if(value <= 59){
      return `a few seconds ago`;
      }
@@ -20,7 +20,7 @@ transform(value: any): number {
      }else{
        hours = Math.round(value/3600);
        if(hours == 1){
-         return`${hours} hour ago`;
+         return `${hours} hour ago`;
        }else{
          return `${hours} hours ago`;
        }
