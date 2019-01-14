@@ -6,12 +6,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuotesFormComponent } from './quotes-form/quotes-form.component';
+import { HighlightDirective } from './highlight.directive';
+import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { TimeCountPipe } from './time-count.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotesComponent,
     QuotesFormComponent,
+    HighlightDirective,
+    QuoteDetailsComponent,
+    TimeCountPipe,
+    
 
 
   ],

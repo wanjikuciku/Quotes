@@ -1,3 +1,17 @@
+<link href="https://fonts.googleapis.com/css?family=Fruktur" rel="stylesheet">
 <h1> QUOTES HUB </h1>
 <hr>
-<app-quotes-form></app-quotes-form>
+<div class="container">
+  <div class="row">
+    <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
+  </div>
+</div>
+<ul>
+  <div *ngFor='let quote of quotes;let i=index'>
+    <div class="details">
+      <p> Quote: "{{quote.quote}}"</p>
+      <p>Author: {{quote.author}}</p>
+    </div>
+    <app-quote-details [quote]='quote'(isComplete)='deleteQuote($event,i)'></app-quote-details>
+  </div>
+</ul>

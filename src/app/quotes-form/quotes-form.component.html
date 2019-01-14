@@ -1,20 +1,27 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-<div class="container">
+<div class="container-fluid">
   <h2>Discover your true self</h2>
-<div class="form">
-  <form>
-      <div class="col-md-4">
-        <label for="name"> Your Name</label>
-        <input type="text" required class="form-control" id="name">
-      </div>
-      <div class="col-md-4">
-        <label for="author"> Author</label>
-        <input type="text" required class="form-control" id="author">
-      </div>
-      <div class="col-md-4">
-        <label for="quote">Quote</label>
-        <textarea class="form-control" id="quote" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-success btn-lg">Add Quote</button>
-  </form>
+    <div class="row">
+      <form (ngSubmit)='submitQuote()' #quotesForm='ngForm'>
+
+            <div class="form-group">
+
+                <label for="name"> Your Name</label>
+                <input type="text" required class="form-control" id="name"[(ngModel)]="newQuote.name" name="name">
+
+            </div>
+            <div class="form-group">
+
+                <label for="Quote">Quote</label>
+                <textarea class="form-control" id="Quote" rows="4" required [(ngModel)]="newQuote.quote" name="quote"></textarea>
+
+            </div>
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author">
+
+            </div>
+            <button type="submit" class="btn btn-success btn-lg">Add Quote</button>
+        </form>
+    </div>
 </div>

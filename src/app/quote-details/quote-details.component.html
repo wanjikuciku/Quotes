@@ -1,0 +1,8 @@
+<p>{{quote.details}}</p>
+<p>"{{quote.quote}}"<br>
+  <span class="date">Uploaded{{quote.dateCreated|timeCount}} minutes ago.</span></p>
+<div class="btns">
+<button id="delete" class="btn btn-danger" (click)='quoteDelete(true)'>Delete Quote</button>
+<button id="upvote" class="btn btn-danger" (click)='upVote()'>UpVote<span>{{upVotes}}</span></button>
+<button id="downvote" class="btn btn-danger" (click)='downVote()'>DownVote<span>{{downVotes}}</span></button>
+</div>
