@@ -1,4 +1,6 @@
-body{
-
-font-family: 'Fruktur', cursive;
+@import url('https://fonts.googleapis.com/css?family=Fruktur');
+h1{
+  font-family: 'Fruktur', cursive;
+  text-align: center;
+  text-decoration: overline;
 }
