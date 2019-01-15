@@ -17,7 +17,7 @@ transform(value: any): any {
      }else{
        return `${minutes} minutes ago`;
      }
-     }else{
+     }else if(value >= 3600){
        hours = Math.round(value/3600);
        if(hours == 1){
          return `${hours} hour ago`;
